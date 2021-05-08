@@ -45,7 +45,9 @@ class CreateAccount extends Component {
             "method": "GET",
             "headers": {
                 "x-rapidapi-key": "c488991181mshe2956f9ff584774p152d44jsn6f2757c1e059",
-                "x-rapidapi-host": "zerobounce1.p.rapidapi.com"
+                "x-rapidapi-host": "zerobounce1.p.rapidapi.com",
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
             }
         }).then(response => {
             console.log(response)
