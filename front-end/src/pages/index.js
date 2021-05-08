@@ -1,7 +1,6 @@
-import OldMocks from './OldMocks'
 import Settings from './Settings'
 import Login from './Login'
-import MockDraft from './MockDraft'
 import CreateAccount from './CreateAccount'
+import TicTacToe from './TicTacToe'
 
-export { OldMocks, Settings, Login, MockDraft, CreateAccount }
+export {Settings, Login, CreateAccount, TicTacToe }

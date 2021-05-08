@@ -46,29 +46,31 @@
 
 // export default App;
 
-import React from 'react'
+import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import { NavBar } from '../components'
-import { Login, MockDraft, Settings, OldMocks, CreateAccount } from '../pages'
+import { Login, Settings, CreateAccount, TicTacToe } from '../pages'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-function App() {
-    return (
-        <Router>
-            <NavBar />
-            <Switch>
-                <Route path="/mockdraft" exact component={MockDraft} />
-                <Route path="/login" exact component={Login} />
-                <Route path="/oldmocks" exact component={OldMocks} />
-                <Route path="/settings" exact component={Settings}
-                />
-                <Route path="/createaccount" exact component={CreateAccount}
-                />
-            </Switch>
-        </Router>
-    )
+class App extends Component {
+    render() {
+        return (
+                <Router>
+                    {/* <NavBar /> */}
+                    <Switch>
+                        {/* <Route path="/mockdraft" exact component={MockDraft} /> */}
+                        {/* <Route path="/mockdraft-board" exact component={MockDraftBoard} /> */}
+                        <Route path="/" exact component={Login} />
+                        {/* <Route path="/oldmocks" exact component={OldMocks} /> */}
+                        <Route path="/settings" exact component={Settings}/>
+                        <Route path="/createaccount" exact component={CreateAccount}/>
+                        <Route path="/game" exact component={TicTacToe}/>
+                    </Switch>
+                </Router>
+            )
+    }
 }
 
 export default App
