@@ -8,7 +8,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd ./front-end && npm install && npm run start && cd ../back-end && npm run start"
+    "start": "cd ./front-end && npm run start && cd ../back-end && npm run start"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ostegall/COMP426Final/issues"
+  },
+  "dependencies": {
+    "create-react-app": "^4.0.3"
   }
 }
