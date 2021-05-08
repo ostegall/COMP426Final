@@ -39,16 +39,16 @@ class CreateAccount extends Component {
     handleSubmit(e) {
         e.preventDefault()
         
-        // var email = this.state.username
+        var email = this.state.username
 
-        // fetch("https://zerobounce1.p.rapidapi.com/v2/validate?email="+email+"&ip_address=", {
-        //     "method": "GET",
-        //     "headers": {
-        //         "x-rapidapi-key": "c488991181mshe2956f9ff584774p152d44jsn6f2757c1e059",
-        //         "x-rapidapi-host": "zerobounce1.p.rapidapi.com"
-        //     }
-        // }).then(response => {
-        //     console.log(response)
+        fetch("https://zerobounce1.p.rapidapi.com/v2/validate?email="+email+"&ip_address=", {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-key": "c488991181mshe2956f9ff584774p152d44jsn6f2757c1e059",
+                "x-rapidapi-host": "zerobounce1.p.rapidapi.com"
+            }
+        }).then(response => {
+            console.log(response)
             const postURL = "http://localhost:9000/login/newUser/"
             fetch(postURL, {
                 method: 'POST',
@@ -76,12 +76,12 @@ class CreateAccount extends Component {
                 p.innerText = "Unable to create account"
                 console.error('Error:', error)
             })
-        // })
-        // .catch(err => {
-        //     var p = document.getElementById('error')
-        //     p.innerText = "Unable to create account due to poorly formatted email"
-        //     console.error("Error:", err);
-        // });
+        })
+        .catch(err => {
+            var p = document.getElementById('error')
+            p.innerText = "Unable to create account due to poorly formatted email"
+            console.error("Error:", err);
+        });
     }
 
     render() {
