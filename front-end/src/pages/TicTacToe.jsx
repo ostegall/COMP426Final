@@ -212,7 +212,7 @@ class Game extends React.Component {
     
             var board = makeBoard('game', this.props.size, this.renderBoard) 
             return (
-                <div className="game-container">
+                <div className={"game-container-"+this.props.size}>
                     {board}
                     {/* {this.props.renderInfo && */}
                         <div className="game-info">
@@ -296,7 +296,7 @@ class BoardSize extends React.Component {
                         name="boardSize"
                         type="number"
                         min="2"
-                        max="3"
+                        max="4"
                         value={this.state.boardSize}
                         onChange={this.handleChange}
                     />

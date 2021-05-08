@@ -105,7 +105,7 @@ class CreateAccount extends Component {
                     <h2>Create Account</h2>
                 </div>
                 <div>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} autoComplete={"on"}>
                     <label>Username:</label>
                     <input required onChange={this.usernameUpdate}></input>
                     <label>Password</label>

@@ -31,10 +31,22 @@
     margin-left: 20px;
   }
   
-  .game-container {
+  .game-container-3 {
     display: flex;
     flex-direction: row;
     width: 398px
+  }
+
+  .game-container-2 {
+    display: flex;
+    flex-direction: row;
+    width: 225px
+  }
+
+  .game-container-4 {
+    display: flex;
+    flex-direction: row;
+    width: 650px
   }
   
   .board {
