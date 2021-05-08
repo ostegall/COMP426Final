@@ -1,10 +1,14 @@
 {
+  "homepage": "https://ostegall.github.io/COMP426Final/",
   "name": "comp426final",
   "version": "1.0.0",
-  "description": "",
+  "description": "### Final project for Comp 426 using Ultimate Tic Tac Toe",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd ./front-end && npm run start && cd ../back-end && npm run start"
   },
   "repository": {
     "type": "git",
@@ -14,6 +18,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ostegall/COMP426Final/issues"
-  },
-  "homepage": "https://github.com/ostegall/COMP426Final#readme"
+  }
 }
